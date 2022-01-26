@@ -62,7 +62,7 @@ function cellClicked(elCell, id) {
     var cell = gBoard[location[0]][location[1]]
     if (cell.isShown) return
     if (gGame.isOn) {
-        if (cell.minesAroundCount === 0) { noNegs(location[0], location[1]) }
+        // if (cell.minesAroundCount === 0) { noNegs(location[0], location[1]) }
         elCell.classList.add('reveal')
         if (cell === MINE) return gameOver(false)
         cell.isShown = true
@@ -134,18 +134,18 @@ function getNegCount() {
     }
 }
 
-function noNegs(cellI, cellJ) {
-    for (var i = cellI - 1; i <= cellJ + 1; i++) {
-        if (i < 0 || i >= gBoard.length) continue;
-        for (var j = cellI - 1; j <= cellJ + 1; j++) {
-            if (j < 0 || j >= gBoard.length) continue;
-            if (i === cellI && j === cellJ) continue;
-            var elCell = document.getElementById(`${i}-${j}`)
-            if (elCell.classList.contains('reveal') || elCell.isMine) break
-            else {
-                elCell.classList.add('reveal')
-                gGame.shownCount++
-            }
-        }
-    }
-}
+// function noNegs(cellI, cellJ) {
+//     for (var i = cellI - 1; i <= cellJ + 1; i++) {
+//         if (i < 0 || i >= gBoard.length) continue;
+//         for (var j = cellI - 1; j <= cellJ + 1; j++) {
+//             if (j < 0 || j >= gBoard.length) continue;
+//             if (i === cellI && j === cellJ) continue;
+//             var elCell = document.getElementById(`${i}-${j}`)
+//             if (elCell.classList.contains('reveal') || elCell.isMine) break
+//             else {
+//                 elCell.classList.add('reveal')
+//                 gGame.shownCount++
+//             }
+//         }
+//     }
+// }
