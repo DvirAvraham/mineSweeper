@@ -1,0 +1,49 @@
+body {
+    background-image: url(../img/1.webp);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    text-align: center;
+}
+
+h1 {
+    color: rgb(19, 10, 10);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 2px #fdfdfd;
+    width: 430px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    margin: auto;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid black;
+    cursor: pointer;
+    /* font-size: 0px; */
+    background-color: gray;
+}
+
+td:hover {
+    background-color: rgb(99, 83, 83);
+}
+
+.reveal {
+    font-size: 1.5em;
+    background-color: rgb(65, 62, 62);
+}
+
+button {
+    font-size: 40px;
+    background-color: rgba(0, 255, 255, 0);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.flag {
+    background-color: rgb(28, 165, 46);
+}
