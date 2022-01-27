@@ -54,16 +54,16 @@ function endStopWatch() {
     gWatchInterval = null
 }
 
-bestTimeByLevel(easy)
+// bestTimeByLevel(easy)
 
-function bestTimeByLevel(level) {
+// function bestTimeByLevel(level) {
 
-    if (typeof(Storage) !== "undefined") {
-        if (localStorage.bestTimeByLevel) {
-            localStorage.bestTimeByLevel = (localStorage.bestTimeByLevel < gBestScore) ? localStorage.bestTimeByLevel : gBestScore
-        } else {
-            localStorage.bestTimeByLevel = 100;
-        }
-        document.getElementById("result").innerHTML = `Best time on ${level} - ${localStorage.bestTimeByLevel} seconds`
-    }
-}
+//     if (typeof(Storage) !== "undefined") {
+//         if (localStorage.bestTimeByLevel) {
+//             localStorage.bestTimeByLevel = (localStorage.bestTimeByLevel < gBestScore) ? localStorage.bestTimeByLevel : gBestScore
+//         } else {
+//             localStorage.bestTimeByLevel = 100;
+//         }
+//         document.getElementById("result").innerHTML = `Best time on ${level} - ${localStorage.bestTimeByLevel} seconds`
+//     }
+// }

@@ -21,6 +21,7 @@ var gGame = {
 var gClickCounter = 0
 var gLives = 3
 var gBestScore = 100
+var gIsHintOn = false
 
 
 function init() {
@@ -77,6 +78,11 @@ function cellClicked(elCell, id) {
     var location = idToLocation(id)
     var cell = gBoard[location[0]][location[1]]
     if (!gClickCounter) return onFirstClick(cell, id)
+        // if (gIsHintOn) {
+        //     hintClick(id)
+        //     setTimeout(hintRemover(id), 2000)
+        //     return
+        // }
     if (cell.isShown || elCell.classList.contains('flag')) return
 
     if (gGame.isOn) {
@@ -202,7 +208,6 @@ function onFirstClick(cell, id) {
     createMeins(gBoard, gLevel.MINES)
     countNegs()
     renderBoard(gBoard)
-        // console.log(gMines);
     gClickCounter++
     gGame.shownCount++
         var firstElCell = document.getElementById(id)
@@ -213,15 +218,31 @@ function onFirstClick(cell, id) {
 }
 
 
-function hintClick(id) {
-    var location = idToLocation(id)
-    for (var i = +location[0] - 1; i <= +location[0] + 1; i++) {
-        if (i < 0 || i >= gBoard.length) continue;
-        for (var j = +location[1] - 1; j <= +location[1] + 1; j++) {
-            if (j < 0 || j >= gLevel.SIZE) continue;
-            var elCell = document.getElementById(`${i}-${j}`)
-            console.log(elCell);
+// function hintClick(id) {
+//     debugger
+//     gIsHintOn = true
+//     var location = idToLocation(id)
+//     for (var i = +location[0] - 1; i <= +location[0] + 1; i++) {
+//         if (i < 0 || i >= gBoard.length) continue;
+//         for (var j = +location[1] - 1; j <= +location[1] + 1; j++) {
+//             if (j < 0 || j >= gBoard.length) continue;
+//             var elNeg = document.getElementById(`${i}-${j}`)
+//             if (elNeg.classList.contains('reveal')) continue
+//             elNeg.classList.add('reveal')
+//         }
+//     }
+// debugger
+// }
 
-        }
-    }
-}
+// function hintRemover(id) {
+//     var location = idToLocation(id)
+//     for (var i = +location[0] - 1; i <= +location[0] + 1; i++) {
+//         if (i < 0 || i >= gBoard.length) continue;
+//         for (var j = +location[1] - 1; j <= +location[1] + 1; j++) {
+//             if (j < 0 || j >= gBoard.length) continue;
+//             var elNeg = document.getElementById(`${i}-${j}`)
+//             elNeg.classList.remove('reveal')
+//         }
+//     }
+//     gIsHintOn = false
+// }
