@@ -10,12 +10,18 @@
 </head>
 
 <body onload="init()">
-    <h1>Welcome to our great Mine Sweeper !</h1>
-    <button class="levels" onclick="init()"> Easy </button>
+    <h1>Welcome to our great MineSweeper !</h1>
+
+    <button class="levels" onclick="levelSetting(1)"> Easy </button>
     <button class="levels" onclick="levelSetting(2)">Hard</button>
     <button class="levels" onclick="levelSetting(3)"> Extreme</button>
+    <div class="time" 0.00></div>
     <div class="table-container"></div>
     <button onclick="init()"> <span>😊</span></button>
+    <div class="lives"> ❤️ ❤️ ❤️ </div>
+    <div class="hint" onclick="hintClick()"> 💡 💡 💡 </div>
+    <div id="result"> </div>
+
 
 
 

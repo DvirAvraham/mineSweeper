@@ -24,7 +24,7 @@ table {
     text-align: center;
     border: 1px solid black;
     cursor: pointer;
-    /* font-size: 0px; */
+    font-size: 0px;
     background-color: gray;
 }
 
@@ -45,9 +45,30 @@ button {
 }
 
 .flag {
-    background-color: rgb(28, 165, 46);
+    background-image: url(../img/flag.png);
+    background-size: cover;
 }
 
 .levels {
     font-size: 20px;
+}
+
+.lives {
+    font-size: 30px;
+}
+
+.hint {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.time {
+    color: black;
+    background-color: crimson;
+    font-size: 20px;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border: 2px solid black;
 }
