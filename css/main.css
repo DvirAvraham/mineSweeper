@@ -24,7 +24,7 @@ table {
     text-align: center;
     border: 1px solid black;
     cursor: pointer;
-    /* font-size: 0px; */
+    font-size: 0px;
     background-color: gray;
 }
 
