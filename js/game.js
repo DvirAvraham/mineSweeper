@@ -65,6 +65,7 @@ function gameOver(isWin) {
 
 function mark(elcell) {
     if (gGame.isOn) {
+        if (elcell.classList.contains('reveal')) return
         elcell.classList.toggle('flag')
         if (elcell.innerText === MINE) {
             if (gGame.markedCount < gLevel.MINES) gGame.markedCount++
