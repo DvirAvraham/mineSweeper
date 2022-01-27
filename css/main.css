@@ -47,3 +47,7 @@ button {
 .flag {
     background-color: rgb(28, 165, 46);
 }
+
+.levels {
+    font-size: 20px;
+}

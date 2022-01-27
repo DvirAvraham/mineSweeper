@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +11,18 @@
 
 <body onload="init()">
     <h1>Welcome to our great Mine Sweeper !</h1>
+    <button class="levels" onclick="init()"> Easy </button>
+    <button class="levels" onclick="levelSetting(2)">Hard</button>
+    <button class="levels" onclick="levelSetting(3)"> Extreme</button>
     <div class="table-container"></div>
     <button onclick="init()"> <span>😊</span></button>
 
 
 
 
-    <script src="js/game.js"></script>
-    <script src="js/utils.js"></script>
-    <script src="js/mines.js"></script>
+    <script src="./js/game.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/mines.js"></script>
 </body>
 
 </html>
