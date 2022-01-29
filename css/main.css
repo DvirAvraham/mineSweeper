@@ -24,7 +24,7 @@ table {
     text-align: center;
     border: 1px solid black;
     cursor: pointer;
-    font-size: 0px;
+    /* font-size: 0px; */
     background-color: gray;
 }
 
@@ -71,4 +71,36 @@ button {
     margin-right: auto;
     border-radius: 5px;
     border: 2px solid black;
+}
+
+.sevenBoom {
+    color: #393d11;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.safe-click {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px #000000;
+    border-width: 50PX;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+
+.un-do {
+    font-size: 25px;
+    color: rgb(255, 68, 0);
+    background-color: rgba(255, 250, 240, 0.568);
+    width: 102px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border: black solid 2PX;
+    border-radius: 5px;
 }

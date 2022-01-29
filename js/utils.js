@@ -54,16 +54,40 @@ function endStopWatch() {
     gWatchInterval = null
 }
 
-// bestTimeByLevel(easy)
 
-// function bestTimeByLevel(level) {
+function bestTimeEasy() {
+    if (typeof(Storage) !== "undefined") {
+        if (localStorage.bestTimeByLevelEasy && gGame.secsPassed) {
+            localStorage.bestTimeByLevelEasy = (+localStorage.bestTimeByLevelEasy < +gGame.secsPassed) ? localStorage.bestTimeByLevelEasy : gGame.secsPassed
+        } else {
+            localStorage.bestTimeByLevelEasy = 100;
+        }
+    }
+    document.querySelector(".result1").innerHTML = `Best time - Easy - ${localStorage.bestTimeByLevelEasy} seconds`
+}
 
-//     if (typeof(Storage) !== "undefined") {
-//         if (localStorage.bestTimeByLevel) {
-//             localStorage.bestTimeByLevel = (localStorage.bestTimeByLevel < gBestScore) ? localStorage.bestTimeByLevel : gBestScore
-//         } else {
-//             localStorage.bestTimeByLevel = 100;
-//         }
-//         document.getElementById("result").innerHTML = `Best time on ${level} - ${localStorage.bestTimeByLevel} seconds`
-//     }
-// }
+
+
+function bestTimeHard() {
+    if (typeof(Storage) !== "undefined") {
+        if (localStorage.bestTimeByLevelHard && gGame.secsPassed) {
+            localStorage.bestTimeByLevelHard = (+localStorage.bestTimeByLevelHard < +gGame.secsPassed) ? localStorage.bestTimeByLevelHard : gGame.secsPassed
+        } else {
+            localStorage.bestTimeByLevelHard = 100;
+        }
+    }
+    document.querySelector(".result2").innerHTML = `Best time - Hard - ${localStorage.bestTimeByLevelHard} seconds`
+}
+
+
+
+function bestTimeExtreme() {
+    if (typeof(Storage) !== "undefined") {
+        if (localStorage.bestTimeByLevelExtreme && gGame.secsPassed) {
+            localStorage.bestTimeByLevelExtreme = (+localStorage.bestTimeByLevelExtreme < +gGame.secsPassed) ? localStorage.bestTimeByLevelExtreme : gGame.secsPassed
+        } else {
+            localStorage.bestTimeByLevelExtreme = 100;
+        }
+    }
+    document.querySelector(".result3").innerHTML = `Best time - Extreme - ${localStorage.bestTimeByLevelExtreme} seconds`
+}

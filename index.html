@@ -12,15 +12,22 @@
 <body onload="init()">
     <h1>Welcome to our great MineSweeper !</h1>
 
+    <div> <button class="manually-create" onclick="clickManuallyCreate()"> manually create ? </button> </div>
     <button class="levels" onclick="levelSetting(1)"> Easy </button>
     <button class="levels" onclick="levelSetting(2)">Hard</button>
     <button class="levels" onclick="levelSetting(3)"> Extreme</button>
-    <div class="time" 0.00></div>
+    <button class="sevenBoom" onclick="clickSevenBoom()"> 7 Boom ? </button>
+    <div class="time"> 0.00 </div>
     <div class="table-container"></div>
     <button onclick="init()"> <span>😊</span></button>
     <div class="lives"> ❤️ ❤️ ❤️ </div>
     <div class="hint" onclick="hintClick()"> 💡 💡 💡 </div>
-    <div id="result"> </div>
+    <div> <img class="safe-click" onclick="safeClick()" src="./img/safe.png"> </div>
+    <div> <span class="safe-remain"> 3 </span> safe clicks left </div>
+    <div class="un-do" onclick="ClickOnUnDoBtn()"> UNDO </div>
+    <div class="result result1"> Play to know Easy best score</div>
+    <div class="result result2"> Play to know Hard best score</div>
+    <div class="result result3">Play to know Extreme best score</div>
 
 
 
