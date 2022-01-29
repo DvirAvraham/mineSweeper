@@ -62,8 +62,8 @@ function init() {
     elHint.innerText = HINT.repeat(gHintsStr)
     var elCount = document.querySelector('.safe-remain')
     elCount.innerText = gSafeClickCount
-    var elCount = document.querySelector('.manually-create')
-    elCount.innerText = 'manually create ? '
+    var elManuallBtn = document.querySelector('.manually-create')
+    elManuallBtn.innerText = 'manually create ? '
 }
 
 
@@ -388,24 +388,23 @@ function ClickOnUnDoBtn() {
 function clickManuallyCreate(id) {
     debugger
     gIsManuallyOn = true
-    if (!id) return
-    var location = idToLocation(id)
     if (!gManuallyMinesNum) {
         if (gBoard.length === 4) gManuallyMinesNum = 2
         else if (gBoard.length === 8) gManuallyMinesNum = 12
         else if (gBoard.length === 12) gManuallyMinesNum = 30
+        document.querySelector('.manually-create').innerText = `place ${gManuallyMinesNum} mines`
     }
-    document.querySelector('.manually-create').innerText = `place ${gManuallyMinesNum} mines`
+    if (!id) return
+    var location = idToLocation(id)
     var mine = {
-            location: {
-                i: location[0],
-                j: location[1]
-            },
-            isShown: false,
-            isMine: true,
-            isMarked: false
-        }
-        // if (gBoard[location[0]][location[1]].is1Click) continue
+        location: {
+            i: location[0],
+            j: location[1]
+        },
+        isShown: false,
+        isMine: true,
+        isMarked: false
+    }
 
     gMines.push(mine);
     gBoard[mine.location.i][mine.location.j] = MINE;
